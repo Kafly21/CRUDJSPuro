@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD JS Puro</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+</head>
+<body>
+    <header>
+        <h1>Gerenciamento de Usuários</h1>
+    </header>
+    <div class="container">
+        <div class="card">
+            <h2>Cadastre-se / Atualizar</h2>
+            <input type="hidden" id="id-usuario">
+            <div class="form-group">
+                <label>Usuário</label>
+                <input type="text" id="input-usuario" placeholder="Digite o nome">
+            </div>
+            <div class="form-group">
+                <label>Senha</label>
+                <input type="password" id="input-senha" placeholder="Digite a senha">
+            </div>
+            <div class="buttons">
+                <button onclick="salvarUsuario()" class="btn btn-salvar">Salvar</button>
+                <button onclick="limparFormulario()" class="btn btn-limpar">Cancelar</button>
+            </div>
+        </div>
+    </div>
+    <div class="card mt-20">
+        <h2>Usuarios Cadastrados</h2>
+        <table id="tabela-usuarios">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Usuário</th>
+                    <th>Senha</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Linhas de usuários serão inseridas aqui dinamicamente -->
+            </tbody>
+        </table>
+    </div>
+    <script src="assets/js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</body>
+</html>
